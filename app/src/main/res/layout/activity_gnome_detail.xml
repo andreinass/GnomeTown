@@ -26,7 +26,7 @@
             >
 
             <com.android.volley.toolbox.NetworkImageView
-                android:layout_height="220dp"
+                android:layout_height="@dimen/dimen_size_image_detail"
                 android:layout_width="match_parent"
                 android:id="@+id/imageViewGnome"
                 app:layout_collapseMode="parallax"
@@ -37,7 +37,6 @@
                 android:id="@+id/toolbar"
                 app:layout_scrollFlags="scroll|enterAlways"
                 android:layout_width="match_parent"
-
                 android:layout_height="?attr/actionBarSize"
                 app:popupTheme="@style/AppTheme.CustomActionBarColor"
                 app:layout_collapseMode="pin" >
@@ -66,19 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:orientation="vertical"
-
-        >
-        
-<com.app.gnometown.Utils.widgets.CustomTextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Gnome name"
-    android:textColor="@color/colorPrimaryDark"
-    android:textSize="20sp"
-    android:id="@+id/value_name"
-    widget:typeface="avenir_medium"
-    />
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -91,9 +78,8 @@
             android:text="Age: "
             android:id="@+id/label_age"
             android:textColor="@color/colorPrimary"
-            android:textSize="15sp"
-            widget:typeface="avenir_medium"
-            />
+            android:textSize="@dimen/dimen_text_label_detail_size"
+            widget:typeface="avenir_medium" />
 
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
@@ -103,8 +89,7 @@
                 android:textSize="15sp"
                 android:layout_toRightOf="@+id/label_age"
                 android:id="@+id/value_age"
-                widget:typeface="avenir_medium"
-                />
+                widget:typeface="avenir_medium" />
 
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
@@ -114,8 +99,7 @@
                 android:textColor="@color/gray"
                 android:layout_toLeftOf="@+id/value_hair"
                 android:textSize="15sp"
-                widget:typeface="avenir_medium"
-                />
+                widget:typeface="avenir_medium" />
 
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
@@ -126,9 +110,7 @@
                 android:layout_alignParentRight="true"
 
                 android:id="@+id/value_hair"
-                widget:typeface="avenir_medium"
-                />
-
+                widget:typeface="avenir_medium" />
 
         </RelativeLayout>
 

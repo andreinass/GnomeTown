@@ -3,6 +3,8 @@ package com.app.gnometown.View.GnomeList;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,6 +35,10 @@ public class GnomeListActivity extends AppCompatActivity implements
 
     @Bind(R.id.toolbar)
     Toolbar toolbar;
+
+    @Bind(R.id.collapsing_toolbar)
+    CollapsingToolbarLayout collapsingToolbar;
+
     GnomeListPresenter presenter;
 
     GnomeAdapter adapter;
@@ -48,6 +54,10 @@ public class GnomeListActivity extends AppCompatActivity implements
         setSupportActionBar(toolbar);
         presenter = new GnomeListPresenterImpl(this);
 
+        final Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/AvenirLTStd-Medium.otf");
+        collapsingToolbar.setCollapsedTitleTypeface(tf);
+        collapsingToolbar.setExpandedTitleTypeface(tf);
+
     }
 
 
@@ -55,7 +65,6 @@ public class GnomeListActivity extends AppCompatActivity implements
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.list_menu, menu);
-
 
         SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
 
@@ -66,11 +75,11 @@ public class GnomeListActivity extends AppCompatActivity implements
             @Override
             public boolean onQueryTextChange(String newText) {
 
-
                 if (newText.equals("") ) {
 
-
-
+                    gnomesRecycler.setAdapter(adapter);
+                    adapter.setGnomes(population);
+                    adapter.notifyDataSetChanged();
                 }
 
                 return false;
@@ -83,9 +92,7 @@ public class GnomeListActivity extends AppCompatActivity implements
 
                 return false;
             }
-
         });
-
 
         return true;
     }
@@ -103,10 +110,14 @@ public class GnomeListActivity extends AppCompatActivity implements
     @Override
     public void setItems(List<Gnome> gnomes) {
 
-        population= gnomes;
 
-        gnomesRecycler.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new GnomeAdapter(this,gnomes,this);
+
+        if(adapter==null) {
+            gnomesRecycler.setLayoutManager(new LinearLayoutManager(this));
+            adapter = new GnomeAdapter(this, gnomes, this);
+            population = gnomes;
+        }
+        adapter.setGnomes(gnomes);
         gnomesRecycler.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 

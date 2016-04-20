@@ -15,18 +15,29 @@
         widget:typeface="avenir_medium"
         android:textColor="@color/colorPrimary"
         android:layout_centerInParent="true"
-        android:text="Welcome to GnomeTown"
+        android:text="@string/welcome"
         />
 
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:id="@+id/loader"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/loader"
+    android:layout_marginTop="15dp"
+    android:layout_below="@+id/text"
+    android:layout_centerHorizontal="true"
+    android:src="@drawable/sun"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loader_f"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/text"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_loading"/>
+        android:src="@drawable/face"/>
+
+
 
 
     <ImageView

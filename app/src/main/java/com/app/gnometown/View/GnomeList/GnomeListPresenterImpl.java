@@ -29,7 +29,6 @@ public class GnomeListPresenterImpl implements GnomeListPresenter,
 
             populateListInteractor.loadData(this);
         }
-
     }
 
     @Override
@@ -40,9 +39,7 @@ public class GnomeListPresenterImpl implements GnomeListPresenter,
 
     @Override
     public void onDestroy() {
-
         view = null;
-
     }
 
     @Override

@@ -31,9 +31,6 @@ public class GnomeDetailActivity extends AppCompatActivity implements GnomeDetai
     @Bind(R.id.value_height)
     TextView height;
 
-    @Bind(R.id.value_name)
-    TextView name;
-
     @Bind(R.id.value_age)
     TextView age;
 
@@ -77,7 +74,7 @@ public class GnomeDetailActivity extends AppCompatActivity implements GnomeDetai
         hair.setText(gnome.getHair_color());
         weight.setText(String.valueOf(gnome.getWeight()));
         height.setText(String.valueOf(gnome.getHeight()));
-collapsingToolbar.setTitle(gnome.getName());
+        collapsingToolbar.setTitle(gnome.getName());
 
         //Populating professions
 
@@ -85,10 +82,7 @@ collapsingToolbar.setTitle(gnome.getName());
         StringBuilder p = new StringBuilder();
         for (int i=0;i< gnome.getProfessions().size();i++){
 
-
             p.append(gnome.getProfessions().get(i).getString()+"\n");
-
-
 
         }
 

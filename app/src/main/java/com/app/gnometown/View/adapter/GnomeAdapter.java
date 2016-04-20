@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.NetworkImageView;
@@ -24,9 +25,10 @@ import butterknife.ButterKnife;
  *
  * GnomeAdapter:
  *
- * Adapter created to load all information about population in GnomeTown
+ * Adapter created to load all information about population in GnomeTown.
+ *
+ *
  */
-
 
 public class GnomeAdapter extends RecyclerView.Adapter<GnomeAdapter.MyViewHolder> {
 
@@ -41,7 +43,6 @@ public class GnomeAdapter extends RecyclerView.Adapter<GnomeAdapter.MyViewHolder
         this.gnomes = gnomes;
         this.listener = listener;
         context = c;
-
     }
 
     @Override
@@ -63,6 +64,9 @@ public class GnomeAdapter extends RecyclerView.Adapter<GnomeAdapter.MyViewHolder
          @Bind(R.id.textViewGnomeProfessionCount)
          TextView gnomeProfessions;
 
+         @Bind(R.id.imageFriends)
+         ImageView friendsIcon;
+
         public MyViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
@@ -74,7 +78,6 @@ public class GnomeAdapter extends RecyclerView.Adapter<GnomeAdapter.MyViewHolder
                 }
             });
         }
-
 
      }
 
@@ -94,6 +97,17 @@ public class GnomeAdapter extends RecyclerView.Adapter<GnomeAdapter.MyViewHolder
         holder.gnomeImage.setDefaultImageResId(Utils.randomColors());
         holder.gnomeName.setText(gnome.getName());
 
+        if(gnome.getFriends().size()==0) {
+
+
+            holder.friendsIcon.setImageResource(R.drawable.ic_sad);
+
+
+        }else{
+
+            holder.friendsIcon.setImageResource(R.drawable.ic_happy);
+
+        }
         String friends = context.getResources().getQuantityString(R.plurals.friends, gnome.getFriends().size(), gnome.getFriends().size());
         holder.gnomeFriends.setText(friends);
 
@@ -107,5 +121,10 @@ public class GnomeAdapter extends RecyclerView.Adapter<GnomeAdapter.MyViewHolder
         return gnomes.get(position);
     }
 
+
+
+    public void setGnomes(List<Gnome> gnomes) {
+        this.gnomes = gnomes;
+    }
 }
 

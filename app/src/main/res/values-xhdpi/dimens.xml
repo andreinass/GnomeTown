@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_size_image_detail">220dp</dimen>
+    <dimen name="dimen_text_label_detail_size">16sp</dimen>
+</resources>

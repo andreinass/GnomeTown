@@ -11,7 +11,7 @@ public interface loadDataInteractor {
 
         void onSuccess();
 
-        void onFail();
+        void onFail(String message);
     }
 
     void loadData(Activity a,onLoadDataListener listener);

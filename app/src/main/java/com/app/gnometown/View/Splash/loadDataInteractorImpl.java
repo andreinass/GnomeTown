@@ -107,12 +107,22 @@ public class loadDataInteractorImpl implements
     @Override
     public void onFail(String identifier, VolleyError error) {
 
+       if(identifier.equals(codeRequest)){
+
+
+           listener.onFail("There was an error retrieving data,please try again later");
+       }
+
     }
 
     @Override
     public void onDisconnected(String identifier) {
 
+        if(identifier.equals(codeRequest)){
 
+
+            listener.onFail("There's no connection available, please make sure you have data connection active and try again");
+        }
 
     }
 }

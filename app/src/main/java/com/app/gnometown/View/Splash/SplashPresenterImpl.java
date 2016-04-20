@@ -46,13 +46,15 @@ public class SplashPresenterImpl implements
     public void onSuccess() {
 
         view.hideLoader();
-        view.showMessage();
+
         view.goToMain();
 
     }
 
     @Override
-    public void onFail() {
+    public void onFail(String msg) {
+        view.hideLoader();
+        view.showMessage(msg);
 
     }
 }

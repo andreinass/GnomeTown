@@ -11,7 +11,7 @@ public interface SplashView {
 
     void hideLoader();
 
-    void showMessage();
+    void showMessage(String message);
 
     void goToMain();
 

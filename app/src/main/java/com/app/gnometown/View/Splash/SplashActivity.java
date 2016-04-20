@@ -4,14 +4,16 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.app.gnometown.R;
 import com.app.gnometown.View.GnomeList.GnomeListActivity;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -24,31 +26,49 @@ public class SplashActivity extends AppCompatActivity implements SplashView {
     @Bind(R.id.loader)
     ImageView loader;
 
+    @Bind(R.id.text)
+    TextView welcomeText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_splash);
         ButterKnife.bind(this);
-
         presenter = new SplashPresenterImpl(this,this);
 
-      //  runnable.run();
-
     }
-
-    private final Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-
-        }
-    };
 
 
     @Override
     public void showLoader() {
-        loader.setVisibility(View.VISIBLE);
-        loader.startAnimation(AnimationUtils.loadAnimation(this, R.anim.rotate));
+
+        AlphaAnimation animation1 = new AlphaAnimation(0.2f, 1.0f);
+        animation1.setDuration(400);
+        animation1.setFillAfter(true);
+
+        animation1.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+
+                loader.setVisibility(View.VISIBLE);
+                loader.startAnimation(AnimationUtils.loadAnimation(SplashActivity.this, R.anim.rotate));
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        welcomeText.startAnimation(animation1);
+
+
     }
 
     @Override
@@ -58,8 +78,8 @@ public class SplashActivity extends AppCompatActivity implements SplashView {
     }
 
     @Override
-    public void showMessage() {
-        Toast.makeText(this,"Data loaded",Toast.LENGTH_SHORT);
+    public void showMessage(String message) {
+        Toast.makeText(this,message,Toast.LENGTH_SHORT);
     }
 
     @Override
