@@ -72,6 +72,7 @@
             android:layout_height="40dp"
             android:layout_marginTop="5dp">
 
+            <!--AGE-->
         <com.app.gnometown.Utils.widgets.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,6 +92,7 @@
                 android:id="@+id/value_age"
                 widget:typeface="avenir_medium" />
 
+            <!--HAIR COLOR-->
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -119,6 +121,7 @@
             android:layout_height="1dp"
             android:background="@color/accent_material_light_1"></View>
 
+        <!--WEIGHT-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -153,6 +156,7 @@
             android:layout_height="1dp"
             android:background="@color/accent_material_light_1"></View>
 
+        <!--HEIGTH-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -188,6 +192,7 @@
             android:layout_height="1dp"
             android:background="@color/accent_material_light_1"></View>
 
+        <!--PROFESSIONS-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

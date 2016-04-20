@@ -56,12 +56,12 @@
         "source": "/Users/andreinasarda/gnometown/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "/Users/andreinasarda/gnometown/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
-        "source": "/Users/andreinasarda/gnometown/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu_item.xml"
-    },
-    {
         "merged": "/Users/andreinasarda/gnometown/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
         "source": "/Users/andreinasarda/gnometown/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/andreinasarda/gnometown/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/Users/andreinasarda/gnometown/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu_item.xml"
     },
     {
         "merged": "/Users/andreinasarda/gnometown/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",

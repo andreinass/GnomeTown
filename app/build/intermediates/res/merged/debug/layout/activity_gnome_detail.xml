@@ -37,7 +37,6 @@
                 android:id="@+id/toolbar"
                 app:layout_scrollFlags="scroll|enterAlways"
                 android:layout_width="match_parent"
-
                 android:layout_height="?attr/actionBarSize"
                 app:popupTheme="@style/AppTheme.CustomActionBarColor"
                 app:layout_collapseMode="pin" >
@@ -66,17 +65,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:orientation="vertical"
-
-        >
-        
-
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp">
 
+            <!--AGE-->
         <com.app.gnometown.Utils.widgets.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,8 +80,7 @@
             android:id="@+id/label_age"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/dimen_text_label_detail_size"
-            widget:typeface="avenir_medium"
-            />
+            widget:typeface="avenir_medium" />
 
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
@@ -95,9 +90,9 @@
                 android:textSize="15sp"
                 android:layout_toRightOf="@+id/label_age"
                 android:id="@+id/value_age"
-                widget:typeface="avenir_medium"
-                />
+                widget:typeface="avenir_medium" />
 
+            <!--HAIR COLOR-->
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -106,8 +101,7 @@
                 android:textColor="@color/gray"
                 android:layout_toLeftOf="@+id/value_hair"
                 android:textSize="15sp"
-                widget:typeface="avenir_medium"
-                />
+                widget:typeface="avenir_medium" />
 
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
@@ -118,9 +112,7 @@
                 android:layout_alignParentRight="true"
 
                 android:id="@+id/value_hair"
-                widget:typeface="avenir_medium"
-                />
-
+                widget:typeface="avenir_medium" />
 
         </RelativeLayout>
 
@@ -129,6 +121,7 @@
             android:layout_height="1dp"
             android:background="@color/accent_material_light_1"></View>
 
+        <!--WEIGHT-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -163,6 +156,7 @@
             android:layout_height="1dp"
             android:background="@color/accent_material_light_1"></View>
 
+        <!--HEIGTH-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -198,6 +192,7 @@
             android:layout_height="1dp"
             android:background="@color/accent_material_light_1"></View>
 
+        <!--PROFESSIONS-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

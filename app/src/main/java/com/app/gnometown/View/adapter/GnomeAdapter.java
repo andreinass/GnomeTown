@@ -7,12 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.android.volley.toolbox.NetworkImageView;
 import com.app.gnometown.Model.Gnome;
 import com.app.gnometown.R;
 import com.app.gnometown.Utils.Utils;
-import com.app.gnometown.View.GnomeList.GnomeListPresenter;
 import com.app.gnometown.connection.cache.ImageCacheManager;
 
 import java.util.List;
