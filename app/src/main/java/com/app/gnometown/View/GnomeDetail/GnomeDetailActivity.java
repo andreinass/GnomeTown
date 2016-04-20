@@ -83,14 +83,14 @@ public class GnomeDetailActivity extends AppCompatActivity implements GnomeDetai
         for (int i=0;i< gnome.getProfessions().size();i++){
 
             p.append(gnome.getProfessions().get(i).getString()+"\n");
-
         }
 
         professions.setText(p.toString());
 
         //Populating friends
         StringBuilder f = new StringBuilder();
-        for (int i=0;i< gnome.getFriends().size()-1;i++){
+        f.append("\n");
+        for (int i=0;i< gnome.getFriends().size();i++){
 
             f.append(gnome.getFriends().get(i).getString()+"\n");
 

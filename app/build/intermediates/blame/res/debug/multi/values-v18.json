@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/andreinasarda/gnometown/app/build/intermediates/res/merged/debug/values-v18/values-v18.xml",
+        "outputFile": "/Users/andreinasarda/AndroidStudioProjects/GnomeTown/app/build/intermediates/res/merged/debug/values-v18/values-v18.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 99
                 },
                 "from": {
-                    "file": "/Users/andreinasarda/gnometown/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v18/values-v18.xml",
+                    "file": "/Users/andreinasarda/AndroidStudioProjects/GnomeTown/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-v18/values-v18.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 229,
+                        "startOffset": 55,
                         "endColumn": 48,
-                        "endOffset": 273
+                        "endOffset": 99
                     }
                 }
             }

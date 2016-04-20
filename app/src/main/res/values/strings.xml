@@ -2,13 +2,18 @@
 
     <string name="app_name" translatable="false">GnomeTown</string>
     <string name="welcome">Welcome to GnomeTown</string>
+    <string name="label_detail_profession">Professions</string>
+    <string name="label_detail_friends">Friends</string>
+    <string name="label_detail_height">Height</string>
+    <string name="label_detail_weight">Weight</string>
+    <string name="label_detail_hair">Hair Color </string>
+    <string name="label_detail_age">Age</string>
 
 
     <plurals name="profession">
         <item quantity="one">%d Profession</item>
         <item quantity="other">%d Professions</item>
     </plurals>
-
 
     <plurals name="friends">
         <item quantity="one">%d Friend</item>

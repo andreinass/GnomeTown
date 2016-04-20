@@ -76,7 +76,7 @@
         <com.app.gnometown.Utils.widgets.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Age: "
+            android:text="@string/label_detail_age"
             android:id="@+id/label_age"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/dimen_text_label_detail_size"
@@ -85,9 +85,7 @@
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="300"
-                android:textColor="@color/gray"
-                android:textSize="15sp"
+                style="@style/TextInfo.TextViewDetailValue"
                 android:layout_toRightOf="@+id/label_age"
                 android:id="@+id/value_age"
                 widget:typeface="avenir_medium" />
@@ -96,21 +94,17 @@
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hair Color: "
+                android:text="@string/label_detail_hair"
                 android:id="@+id/label_hair"
-                android:textColor="@color/gray"
                 android:layout_toLeftOf="@+id/value_hair"
-                android:textSize="15sp"
+                style="@style/TextInfo.TextViewDetailLabel"
                 widget:typeface="avenir_medium" />
 
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="300"
-                android:textColor="@color/gray"
-                android:textSize="15sp"
                 android:layout_alignParentRight="true"
-
+                style="@style/TextInfo.TextViewDetailValue"
                 android:id="@+id/value_hair"
                 widget:typeface="avenir_medium" />
 
@@ -131,10 +125,9 @@
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Weight: "
+                android:text="@string/label_detail_weight"
                 android:id="@+id/label_weigth"
-                android:textColor="@color/gray"
-                android:textSize="15sp"
+                style="@style/TextInfo.TextViewDetailLabel"
                 widget:typeface="avenir_medium"
                 />
 
@@ -143,18 +136,13 @@
                 android:layout_height="wrap_content"
                 android:text="12.333"
                 android:id="@+id/value_weight"
-                android:textColor="@color/gray"
-                android:textSize="15sp"
+                style="@style/TextInfo.TextViewDetailValue"
                 android:layout_alignParentRight="true"
                 widget:typeface="avenir_medium"
                 />
 
         </RelativeLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/accent_material_light_1"></View>
 
         <!--HEIGTH-->
         <RelativeLayout
@@ -166,20 +154,17 @@
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Height: "
+                android:text="@string/label_detail_height"
+                style="@style/TextInfo.TextViewDetailLabel"
                 android:id="@+id/label_heigth"
-                android:textColor="@color/gray"
-                android:textSize="15sp"
                 widget:typeface="avenir_medium"
                 />
 
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="12.333"
                 android:id="@+id/value_height"
-                android:textColor="@color/gray"
-                android:textSize="15sp"
+                style="@style/TextInfo.TextViewDetailValue"
                 android:layout_alignParentRight="true"
                 widget:typeface="avenir_medium"
                 />
@@ -198,24 +183,30 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageProf"
+                android:src="@drawable/ic_profession"/>
+
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Professions: "
+                android:text="@string/label_detail_profession"
                 android:id="@+id/label_prof"
-                android:textColor="@color/gray"
-                android:textSize="15sp"
+                android:layout_toRightOf="@+id/imageProf"
+                android:layout_marginLeft="10dp"
+                style="@style/TextInfo.TextViewDetailLabelTitle"
                 widget:typeface="avenir_medium"
                 />
 
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="12.333"
                 android:id="@+id/list_profesion"
-                android:textColor="@color/gray"
-                android:textSize="15sp"
                 android:layout_marginTop="5dp"
+                android:lineSpacingExtra="3dp"
+                style="@style/TextInfo.TextViewDetailValue"
                 android:layout_below="@+id/label_prof"
                 widget:typeface="avenir_medium"
                 />
@@ -232,23 +223,28 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageFriends"
+               />
+
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Friends: "
+                android:text="@string/label_detail_friends"
+                android:textSize="@dimen/dimen_text_size_detail__title"
+                style="@style/TextInfo.TextViewDetailLabelTitle"
                 android:id="@+id/label_friends"
-                android:textColor="@color/gray"
-                android:textSize="15sp"
                 widget:typeface="avenir_medium"
                 />
 
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="12.333"
+                style="@style/TextInfo.TextViewDetailValue"
                 android:id="@+id/list_friends"
-                android:textColor="@color/gray"
-                android:textSize="15sp"
+                android:lineSpacingExtra="3dp"
                 android:layout_marginTop="5dp"
                 android:layout_below="@+id/label_friends"
                 widget:typeface="avenir_medium"

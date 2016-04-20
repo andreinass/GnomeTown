@@ -31,7 +31,6 @@
             android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/imageViewGnome"
             android:id="@+id/textViewGnomeName"
-
             android:layout_alignTop="@+id/imageViewGnome" />
 
 
@@ -54,13 +53,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/imageProfession"
+                    android:layout_centerVertical="true"
                     android:src="@drawable/ic_profession"/>
 
             <com.app.gnometown.Utils.widgets.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/gray"
-                android:textSize="15sp"
+                style="@style/TextInfo.TextViewDetailValue"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/imageProfession"
                 widget:typeface="avenir_medium"
@@ -80,6 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageFriends"
+                android:layout_centerVertical="true"
                 android:src="@drawable/ic_happy"/>
 
 
@@ -87,9 +88,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewGnomeFriendsCount"
-                android:textColor="@color/gray"
-                android:textSize="15sp"
-                android:text="hola"
+                android:layout_centerVertical="true"
+                style="@style/TextInfo.TextViewDetailValue"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/imageFriends"
                 android:layout_marginTop="5dp"
@@ -100,26 +100,6 @@
 
 
         </android.support.v7.widget.LinearLayoutCompat>
-
-        <!-- <RelativeLayout
-             android:layout_width="match_parent"
-             android:layout_height="40dp"
-             android:padding="5dp"
-             android:elevation="1dp"
-            android:layout_alignParentBottom="true"
-             android:background="@drawable/gradient">
-
-             <TextView
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:text="Holaaaa"
-                 android:textColor="@color/white"
-                 android:textSize="16sp"
-                 android:id="@+id/textViewGnomeName"
-                 android:textStyle="bold" />
-
-         </RelativeLayout>
- -->
 
     </RelativeLayout>
 
