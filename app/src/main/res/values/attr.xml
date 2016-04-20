@@ -1,0 +1,15 @@
+<resources>
+
+    <declare-styleable name="CustomText">
+        <attr name="typeface"/>
+    </declare-styleable>
+
+    <attr name="typeface" format="enum">
+        <enum name="avenir_regular" value="0"/>
+        <enum name="avenir_medium" value="1"/>
+        <enum name="avenir_heavy" value="2"/>
+    </attr>
+
+
+
+</resources>
