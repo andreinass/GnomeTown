@@ -48,27 +48,28 @@ public class GnomeAdapter extends RecyclerView.Adapter<GnomeAdapter.MyViewHolder
         return gnomes.size();
     }
 
-     class MyViewHolder extends RecyclerView.ViewHolder {
+    class MyViewHolder extends RecyclerView.ViewHolder {
 
         @Bind(R.id.imageViewGnome)
         NetworkImageView gnomeImage;
 
-         @Bind(R.id.textViewGnomeName)
-         TextView gnomeName;
+        @Bind(R.id.textViewGnomeName)
+        TextView gnomeName;
 
-         @Bind(R.id.textViewGnomeFriendsCount)
-         TextView gnomeFriends;
+        @Bind(R.id.textViewGnomeFriendsCount)
+        TextView gnomeFriends;
 
-         @Bind(R.id.textViewGnomeProfessionCount)
-         TextView gnomeProfessions;
+        @Bind(R.id.textViewGnomeProfessionCount)
+        TextView gnomeProfessions;
 
-         @Bind(R.id.imageFriends)
-         ImageView friendsIcon;
+        @Bind(R.id.imageFriends)
+        ImageView friendsIcon;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
 
+            //Listener when gnome in list is ckicked
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -76,8 +77,7 @@ public class GnomeAdapter extends RecyclerView.Adapter<GnomeAdapter.MyViewHolder
                 }
             });
         }
-
-     }
+    }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -91,21 +91,24 @@ public class GnomeAdapter extends RecyclerView.Adapter<GnomeAdapter.MyViewHolder
 
         Gnome gnome = gnomes.get(position);
 
+        //Populating gnome row
         holder.gnomeImage.setImageUrl(gnome.getThumbnail(), ImageCacheManager.getInstance().getImageLoader());
         holder.gnomeImage.setDefaultImageResId(Utils.randomColors());
         holder.gnomeName.setText(gnome.getName());
 
+
+        //If gnome has no friends, I put a sad face
         if(gnome.getFriends().size()==0) {
 
-
             holder.friendsIcon.setImageResource(R.drawable.ic_sad);
-
 
         }else{
 
             holder.friendsIcon.setImageResource(R.drawable.ic_happy);
 
         }
+
+
         String friends = context.getResources().getQuantityString(R.plurals.friends, gnome.getFriends().size(), gnome.getFriends().size());
         holder.gnomeFriends.setText(friends);
 
@@ -118,7 +121,6 @@ public class GnomeAdapter extends RecyclerView.Adapter<GnomeAdapter.MyViewHolder
 
         return gnomes.get(position);
     }
-
 
 
     public void setGnomes(List<Gnome> gnomes) {

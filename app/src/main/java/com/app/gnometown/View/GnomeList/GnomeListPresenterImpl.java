@@ -1,6 +1,10 @@
 package com.app.gnometown.View.GnomeList;
 
+import android.view.View;
+
 import com.app.gnometown.Model.Gnome;
+import com.app.gnometown.R;
+
 import java.util.List;
 import io.realm.RealmResults;
 
@@ -54,7 +58,6 @@ public class GnomeListPresenterImpl implements GnomeListPresenter,
 
         List<Gnome> g = gnomes.subList(0,gnomes.size());
         view.setItems(g);
-
     }
 
     @Override
@@ -63,4 +66,9 @@ public class GnomeListPresenterImpl implements GnomeListPresenter,
     }
 
 
+    @Override
+    public void onFail(String message) {
+
+        view.showMessage(message);
+    }
 }

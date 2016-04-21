@@ -3,7 +3,6 @@ package com.app.gnometown.View.Splash;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -16,8 +15,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
+ *
+ * Full Screen Activity, init activity, load information about gnomes
+ *
  */
 public class SplashActivity extends AppCompatActivity implements SplashView {
 
@@ -36,15 +36,14 @@ public class SplashActivity extends AppCompatActivity implements SplashView {
         setContentView(R.layout.activity_splash);
         ButterKnife.bind(this);
         presenter = new SplashPresenterImpl(this,this);
-
     }
-
 
     @Override
     public void showLoader() {
 
+        //Starting Splash animation
         AlphaAnimation animation1 = new AlphaAnimation(0.2f, 1.0f);
-        animation1.setDuration(400);
+        animation1.setDuration(800);
         animation1.setFillAfter(true);
 
         animation1.setAnimationListener(new Animation.AnimationListener() {
@@ -56,7 +55,7 @@ public class SplashActivity extends AppCompatActivity implements SplashView {
             @Override
             public void onAnimationEnd(Animation animation) {
 
-                loader.setVisibility(View.VISIBLE);
+                //starting loader after alpha animation ends
                 loader.startAnimation(AnimationUtils.loadAnimation(SplashActivity.this, R.anim.rotate));
             }
 
@@ -67,14 +66,12 @@ public class SplashActivity extends AppCompatActivity implements SplashView {
         });
 
         welcomeText.startAnimation(animation1);
-
-
     }
 
     @Override
     public void hideLoader() {
-        loader.setVisibility(View.GONE);
 
+        loader.getAnimation().cancel();
     }
 
     @Override
@@ -84,7 +81,7 @@ public class SplashActivity extends AppCompatActivity implements SplashView {
 
     @Override
     public void goToMain() {
-
+        //Gnome's list
         Intent i = new Intent(this, GnomeListActivity.class);
         startActivity(i);
         overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
@@ -102,6 +99,4 @@ public class SplashActivity extends AppCompatActivity implements SplashView {
         super.onDestroy();
         presenter.onDestroy();
     }
-
-
 }

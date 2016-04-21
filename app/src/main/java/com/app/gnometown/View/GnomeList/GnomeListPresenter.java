@@ -1,5 +1,7 @@
 package com.app.gnometown.View.GnomeList;
 
+import android.view.View;
+
 import com.app.gnometown.Model.Gnome;
 
 /**

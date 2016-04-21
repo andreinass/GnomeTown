@@ -14,6 +14,7 @@ public class populateDetailInteractorImpl implements
     @Override
     public void loadDetail(onDetailLoadedListener listener,int id) {
 
+        //Finding gnome that matches with id, and show detail
         Realm realm = Realm.getDefaultInstance();
 
         Gnome gnome = realm.where(Gnome.class).equalTo("id",id).findFirst();
@@ -23,7 +24,7 @@ public class populateDetailInteractorImpl implements
             listener.onSuccess(gnome);
 
         }else{
-
+            //Gnome is not found, this should not happend because all info was loaded in realm at beginning
             listener.onFail();
         }
     }

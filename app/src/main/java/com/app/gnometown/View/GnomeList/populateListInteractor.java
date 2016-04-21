@@ -13,7 +13,7 @@ public interface populateListInteractor {
 
         void onSuccess(RealmResults<Gnome> gnomes);
 
-        void onFail();
+        void onFail(String message);
     }
 
     interface onListFilteredListener {

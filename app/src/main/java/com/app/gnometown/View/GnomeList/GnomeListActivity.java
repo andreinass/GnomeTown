@@ -1,7 +1,6 @@
 package com.app.gnometown.View.GnomeList;
 
-import android.app.SearchManager;
-import android.content.Context;
+
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -14,13 +13,12 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.widget.Toast;
 import com.app.gnometown.Model.Gnome;
 import com.app.gnometown.R;
 import com.app.gnometown.View.GnomeDetail.GnomeDetailActivity;
 import com.app.gnometown.View.adapter.GnomeAdapter;
 import com.app.gnometown.View.adapter.RecyclerViewItemClickListener;
-
 import java.util.Collections;
 import java.util.List;
 import butterknife.Bind;
@@ -57,16 +55,12 @@ public class GnomeListActivity extends AppCompatActivity implements
         final Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/AvenirLTStd-Medium.otf");
         collapsingToolbar.setCollapsedTitleTypeface(tf);
         collapsingToolbar.setExpandedTitleTypeface(tf);
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.list_menu, menu);
-
-        SearchManager searchManager = (SearchManager)getSystemService(Context.SEARCH_SERVICE);
 
         MenuItem menuItem = menu.findItem(R.id.action_search);
         searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
@@ -110,8 +104,6 @@ public class GnomeListActivity extends AppCompatActivity implements
     @Override
     public void setItems(List<Gnome> gnomes) {
 
-
-
         if(adapter==null) {
             gnomesRecycler.setLayoutManager(new LinearLayoutManager(this));
             adapter = new GnomeAdapter(this, gnomes, this);
@@ -129,7 +121,13 @@ public class GnomeListActivity extends AppCompatActivity implements
         Intent i = new Intent(this, GnomeDetailActivity.class);
         i.putExtra(GnomeDetailActivity.EXTRA_ID,id);
         startActivity(i);
+        overridePendingTransition(R.anim.transition_in_left, R.anim.transition_out_left);
 
+    }
+
+    @Override
+    public void showMessage(String message) {
+        Toast.makeText(this, message,Toast.LENGTH_SHORT).show();
     }
 
     @Override

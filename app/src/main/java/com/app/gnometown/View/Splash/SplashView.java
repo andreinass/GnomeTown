@@ -4,6 +4,8 @@ import com.app.gnometown.Model.Response;
 
 /**
  * Created by andreinasarda on 17/4/16.
+ *
+ * Interface to hable SplashActivity View
  */
 public interface SplashView {
 

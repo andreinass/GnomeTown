@@ -6,8 +6,9 @@
     <string name="label_detail_friends">Friends</string>
     <string name="label_detail_height">Height</string>
     <string name="label_detail_weight">Weight</string>
-    <string name="label_detail_hair">Hair Color </string>
-    <string name="label_detail_age">Age</string>
+    <string name="label_detail_hair">"Hair Color  "</string>
+    <string name="label_detail_age">"Age  "</string>
+    <string name="label_message_no_data">There was an error loading data,please try again</string>
 
 
     <plurals name="profession">

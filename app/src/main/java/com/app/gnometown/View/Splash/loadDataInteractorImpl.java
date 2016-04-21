@@ -1,12 +1,13 @@
 package com.app.gnometown.View.Splash;
 
 import android.app.Activity;
+import android.os.Handler;
 
 import com.android.volley.VolleyError;
 import com.app.gnometown.Model.Gnome;
 import com.app.gnometown.Model.RealmString;
 
-import com.app.gnometown.Model.Response;
+
 import com.app.gnometown.Utils.Utils;
 import com.app.gnometown.connection.ConnectionUtils;
 import com.google.gson.Gson;
@@ -23,6 +24,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
+
 
 import io.realm.Realm;
 import io.realm.RealmList;
@@ -42,10 +44,11 @@ public class loadDataInteractorImpl implements
     onLoadDataListener listener;
 
     @Override
-    public void loadData(Activity a, onLoadDataListener listener) {
+    public void loadData(final Activity a, onLoadDataListener listener) {
 
-        ConnectionUtils.performRequest(path,null,codeRequest,a,ConnectionUtils.GET,null,null,this);
+
         this.listener = listener;
+        ConnectionUtils.performRequest(path, null, codeRequest, a, ConnectionUtils.GET, null, null, this);
     }
 
 
@@ -65,8 +68,6 @@ public class loadDataInteractorImpl implements
                 @Override
                 public void write(JsonWriter out, RealmList<RealmString> value) throws IOException {
                     // Ignore
-
-
                 }
 
                 @Override

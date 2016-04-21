@@ -51,5 +51,6 @@ public class GnomeDetailPresenterImpl implements
 
         //There's no gnome :s How is this possible???
 
+
     }
 }

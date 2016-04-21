@@ -1,6 +1,7 @@
 package com.app.gnometown.View.Splash;
 
 import android.app.Activity;
+import android.os.Handler;
 
 /**
  * Created by andreinasarda on 17/4/16.
@@ -30,7 +31,13 @@ public class SplashPresenterImpl implements
         if(activity!=null){
 
             view.showLoader();
-            loadDataInteractor.loadData(activity,this);
+
+            //Delaying loading data to init Splash
+            new Handler().postDelayed(new Runnable() {
+                @Override public void run() {
+                    loadDataInteractor.loadData(activity,SplashPresenterImpl.this);
+                }
+            },1000);
         }
 
     }

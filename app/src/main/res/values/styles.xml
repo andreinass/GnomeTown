@@ -38,7 +38,7 @@
     </style>
 
     <style name="TextInfo.TextViewDetailLabelTitle">
-        <item name="android:textSize">@dimen/dimen_text_label_detail_size</item>
+        <item name="android:textSize">@dimen/dimen_text_size_detail__title</item>
         <item name="android:textColor">@color/colorPrimaryDark</item>
     </style>
 

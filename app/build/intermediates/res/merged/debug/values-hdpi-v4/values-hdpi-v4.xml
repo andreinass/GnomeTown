@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="dime_size_text_splash">22sp</dimen>
     <dimen name="dimen_size_image_detail">250dp</dimen>
     <dimen name="dimen_text_label_detail_size">15sp</dimen>
     <dimen name="dimen_text_size_detail__title">17sp</dimen>
+    <string name="label_no_friends">This gnome has no friends</string>
+    <string name="label_no_profession">This gnome is not working right now</string>
     <style name="Base.Widget.AppCompat.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle.Common">
           <item name="barLength">18.66dp</item>
           <item name="gapBetweenBars">3.33dp</item>

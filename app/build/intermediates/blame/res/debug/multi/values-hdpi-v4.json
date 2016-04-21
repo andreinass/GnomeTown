@@ -1,23 +1,23 @@
 [
     {
-        "outputFile": "/Users/andreinasarda/AndroidStudioProjects/GnomeTown/app/build/intermediates/res/merged/debug/values-hdpi-v4/values-hdpi-v4.xml",
+        "outputFile": "/Users/andreinasarda/gnometown/app/build/intermediates/res/merged/debug/values-hdpi-v4/values-hdpi-v4.xml",
         "map": [
             {
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 55,
-                    "endOffset": 106
+                    "endColumn": 52,
+                    "endOffset": 103
                 },
                 "from": {
-                    "file": "/Users/andreinasarda/AndroidStudioProjects/GnomeTown/app/src/main/res/values-hdpi/dimens.xml",
+                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/dimens.xml",
                     "position": {
-                        "startLine": 2,
+                        "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 55,
-                        "endOffset": 106
+                        "startOffset": 232,
+                        "endColumn": 52,
+                        "endOffset": 280
                     }
                 }
             },
@@ -25,59 +25,73 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 111,
-                    "endColumn": 59,
-                    "endOffset": 166
+                    "startOffset": 108,
+                    "endColumn": 55,
+                    "endOffset": 159
                 },
                 "from": {
-                    "file": "/Users/andreinasarda/AndroidStudioProjects/GnomeTown/app/src/main/res/values-hdpi/dimens.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 111,
-                        "endColumn": 59,
-                        "endOffset": 166
-                    }
+                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 171,
-                    "endColumn": 60,
-                    "endOffset": 227
+                    "startOffset": 164,
+                    "endColumn": 59,
+                    "endOffset": 219
                 },
                 "from": {
-                    "file": "/Users/andreinasarda/AndroidStudioProjects/GnomeTown/app/src/main/res/values-hdpi/dimens.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 171,
-                        "endColumn": 60,
-                        "endOffset": 227
-                    }
+                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/dimens.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 232,
-                    "endLine": 9,
-                    "endColumn": 13,
-                    "endOffset": 504
+                    "startOffset": 224,
+                    "endColumn": 60,
+                    "endOffset": 280
                 },
                 "from": {
-                    "file": "/Users/andreinasarda/AndroidStudioProjects/GnomeTown/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values-hdpi-v4/values-hdpi-v4.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 6,
-                        "endColumn": 13,
-                        "endOffset": 327
-                    }
+                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 285,
+                    "endColumn": 70,
+                    "endOffset": 351
+                },
+                "from": {
+                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 356,
+                    "endColumn": 83,
+                    "endOffset": 435
+                },
+                "from": {
+                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 440,
+                    "endLine": 12,
+                    "endColumn": 13,
+                    "endOffset": 712
+                },
+                "from": {
+                    "file": "/Users/andreinasarda/gnometown/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-hdpi/values-hdpi.xml"
                 }
             }
         ]
