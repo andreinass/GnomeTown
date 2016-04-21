@@ -10,7 +10,6 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.app.gnometown.GnomeTown;
-import com.app.gnometown.View.Splash.loadDataInteractorImpl;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.json.JSONException;
@@ -18,11 +17,29 @@ import org.json.JSONObject;
 import java.util.Map;
 
 
+/**
+ *
+ * Class to handle connection
+ *
+ */
 public class ConnectionUtils {
 
     public static final int GET = Request.Method.GET;
 
 
+    /**
+     *
+     * Create json request
+     *
+     * @param model model to be passed to service
+     * @param url path to service
+     * @param listenerOk listener to habdle succesfull response
+     * @param listenerError listener to handle failure response
+     * @param headers headers to be added in request
+     * @param timeoutMillis timeout
+     * @param method type of request
+     * @param identifier identifier of request
+     */
     private static void makeJsonObjectRequest(Object model, String url,
                                               CustomVolleyJsonListener listenerOk,
                                               CustomVolleyErrorListener listenerError,
@@ -36,7 +53,7 @@ public class ConnectionUtils {
             }
 
         }else{
-            request_headers = "Sin headers";
+            request_headers = "No headers";
         }
 
         Log.i(identifier+"_REQUEST_HEADERS", request_headers);
@@ -85,7 +102,12 @@ public class ConnectionUtils {
     }
 
 
-
+    /**
+     * @param context
+     *
+     * @return true if is connected
+     *  otherwise , false.
+     */
     public static boolean isConnectingToInternet(Context context) {
 
         ConnectivityManager connectivity = (ConnectivityManager) context
@@ -101,6 +123,10 @@ public class ConnectionUtils {
     }
 
 
+    /**
+     * @param object
+     * @return parsed json to String
+     */
     private static String objectToJsonString(Object object){
 
         Gson gson =  new GsonBuilder().create();
@@ -108,13 +134,43 @@ public class ConnectionUtils {
     }
 
 
+    /**
+     *
+     * Create request to server
+     *
+     * @param relativePath
+     * @param model
+     * @param identifier
+     * @param activity
+     * @param typeRequest
+     * @param headers
+     * @param extraData
+     * @param callback
+     */
     public static void performRequest(String relativePath, Object model, final String identifier, Activity activity, int typeRequest, Map<String, String> headers, final Object extraData,ConnectionCallbacks callback) {
 
         performRequestGeneric(relativePath, model, identifier, activity, null, typeRequest, headers, 5000, extraData, true,callback);
     }
 
 
-
+    /**
+     *
+     * Perform request to server
+     *
+     * @param relativePath relative path to service
+     * @param model model to be passed to service
+     * @param identifier identifier of request
+     * @param activity context
+     * @param fragment context
+     * @param typeRequest type of request
+     * @param headers headers to be send
+     * @param timeout timeout
+     * @param extraData
+     * @param showLoaderDialog
+     * @param callbacks handlers to response
+     *
+     *
+     */
     private static void performRequestGeneric(String relativePath, Object model, final String identifier, final Activity activity, final Fragment fragment, int typeRequest, Map<String, String> headers, int timeout, final Object extraData, final boolean showLoaderDialog, final ConnectionCallbacks callbacks){
 
         if (ConnectionUtils.isConnectingToInternet(activity)) {

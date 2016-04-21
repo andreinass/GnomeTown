@@ -6,8 +6,6 @@ import com.android.volley.toolbox.ImageLoader.ImageCache;
 
 /**
  * Basic LRU Memory cache.
- * 
- * @author Trey Robinson
  *
  */
 public class BitmapLruImageCache extends LruCache<String, Bitmap> implements ImageCache{

@@ -3,28 +3,14 @@ package com.app.gnometown.connection.cache;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
-
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.ImageLoader.ImageCache;
 import com.android.volley.toolbox.ImageLoader.ImageListener;
 import com.app.gnometown.connection.RequestManager;
 
 
-/**
- * Implementation of volley's ImageCache interface. This manager tracks the application image loader and cache. 
- * 
- * Volley recommends an L1 non-blocking cache which is the default MEMORY CacheType. 
- * @author Trey Robinson
- *
- */
 public class ImageCacheManager{
 
-	/**
-	 * Volley recommends in-memory L1 cache but both a disk and memory cache are provided.
-	 * Volley includes a L2 disk cache out of the box but you can technically use a disk cache as an L1 cache provided
-	 * you can live with potential i/o blocking. 
-	 *
-	 */
 	public enum CacheType {
 		DISK
 		, MEMORY

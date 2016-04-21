@@ -7,8 +7,6 @@ import com.android.volley.toolbox.Volley;
 
 /**
  * Manager for the queue
- * 
- * @author Trey Robinson
  *
  */
 public class RequestManager {

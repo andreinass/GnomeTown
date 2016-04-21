@@ -54,7 +54,6 @@ public class GnomeTown extends Application{
 
     public RequestQueue getRequestQueue() {
         if (mRequestQueue == null) {
-            // mRequestQueue = Volley.newRequestQueue(getApplicationContext());
 
             Cache cache = new DiskBasedCache(getCacheDir(), 1024 * 1024);
             Network network = new BasicNetwork(new HurlStack());
@@ -71,17 +70,6 @@ public class GnomeTown extends Application{
         getRequestQueue().add(req);
     }
 
-    public <T> void addToRequestQueue(Request<T> req) {
-        req.setTag(TAG);
-        getRequestQueue().add(req);
-    }
-
-    public void cancelPendingRequests(Object tag) {
-        if (mRequestQueue != null) {
-
-            mRequestQueue.cancelAll(tag);
-        }
-    }
 
     private void init() {
         RequestManager.init(this);
