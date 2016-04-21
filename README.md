@@ -1,4 +1,4 @@
-# gnometown
+# GnomeTown
 
 Libraries used in this project:
 
