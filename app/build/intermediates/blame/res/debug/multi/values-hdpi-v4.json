@@ -30,7 +30,14 @@
                     "endOffset": 159
                 },
                 "from": {
-                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/dimens.xml"
+                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/dimens.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 55,
+                        "endOffset": 106
+                    }
                 }
             },
             {
@@ -42,7 +49,14 @@
                     "endOffset": 219
                 },
                 "from": {
-                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/dimens.xml"
+                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 111,
+                        "endColumn": 59,
+                        "endOffset": 166
+                    }
                 }
             },
             {
@@ -54,7 +68,14 @@
                     "endOffset": 280
                 },
                 "from": {
-                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/dimens.xml"
+                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 171,
+                        "endColumn": 60,
+                        "endOffset": 227
+                    }
                 }
             },
             {
@@ -66,7 +87,14 @@
                     "endOffset": 351
                 },
                 "from": {
-                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/strings.xml"
+                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 70,
+                        "endOffset": 121
+                    }
                 }
             },
             {
@@ -78,7 +106,14 @@
                     "endOffset": 435
                 },
                 "from": {
-                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/strings.xml"
+                    "file": "/Users/andreinasarda/gnometown/app/src/main/res/values-hdpi/strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 126,
+                        "endColumn": 83,
+                        "endOffset": 205
+                    }
                 }
             },
             {
@@ -91,7 +126,15 @@
                     "endOffset": 712
                 },
                 "from": {
-                    "file": "/Users/andreinasarda/gnometown/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-hdpi/values-hdpi.xml"
+                    "file": "/Users/andreinasarda/gnometown/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-hdpi/values-hdpi.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 235,
+                        "endLine": 8,
+                        "endColumn": 13,
+                        "endOffset": 507
+                    }
                 }
             }
         ]

@@ -14,6 +14,8 @@ import io.realm.RealmList;
 
 /**
  * Created by andreinasarda on 17/4/16.
+ *
+ * Serializer to parse RealmString class
  */
 public class RealmStringConverter implements
         JsonSerializer<RealmList<RealmString>>,

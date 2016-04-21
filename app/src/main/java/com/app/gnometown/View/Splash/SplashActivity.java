@@ -3,8 +3,6 @@ package com.app.gnometown.View.Splash;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -41,31 +39,9 @@ public class SplashActivity extends AppCompatActivity implements SplashView {
     @Override
     public void showLoader() {
 
-        //Starting Splash animation
-        AlphaAnimation animation1 = new AlphaAnimation(0.2f, 1.0f);
-        animation1.setDuration(800);
-        animation1.setFillAfter(true);
+        //starting loader to get data from service
+        loader.startAnimation(AnimationUtils.loadAnimation(SplashActivity.this, R.anim.rotate));
 
-        animation1.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-
-                //starting loader after alpha animation ends
-                loader.startAnimation(AnimationUtils.loadAnimation(SplashActivity.this, R.anim.rotate));
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-
-        welcomeText.startAnimation(animation1);
     }
 
     @Override

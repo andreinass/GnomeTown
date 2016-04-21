@@ -4,12 +4,12 @@
         "source": "/Users/andreinasarda/gnometown/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "/Users/andreinasarda/gnometown/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/andreinasarda/gnometown/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_popup_enter.xml"
-    },
-    {
         "merged": "/Users/andreinasarda/gnometown/app/build/intermediates/res/merged/debug/anim/transition_out_left.xml",
         "source": "/Users/andreinasarda/gnometown/app/src/main/res/anim/transition_out_left.xml"
+    },
+    {
+        "merged": "/Users/andreinasarda/gnometown/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/andreinasarda/gnometown/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_popup_enter.xml"
     },
     {
         "merged": "/Users/andreinasarda/gnometown/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",

@@ -21,7 +21,6 @@ public class SplashPresenterImpl implements
         this.view= view;
 
         loadDataInteractor = new loadDataInteractorImpl();
-
     }
 
 
@@ -32,12 +31,11 @@ public class SplashPresenterImpl implements
 
             view.showLoader();
 
-            //Delaying loading data to init Splash
-            new Handler().postDelayed(new Runnable() {
-                @Override public void run() {
-                    loadDataInteractor.loadData(activity,SplashPresenterImpl.this);
-                }
-            },1000);
+
+
+
+            loadDataInteractor.loadData(activity,SplashPresenterImpl.this);
+
         }
 
     }
@@ -53,9 +51,7 @@ public class SplashPresenterImpl implements
     public void onSuccess() {
 
         view.hideLoader();
-
         view.goToMain();
-
     }
 
     @Override
